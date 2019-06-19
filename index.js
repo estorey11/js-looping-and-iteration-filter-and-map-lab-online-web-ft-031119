@@ -5,8 +5,12 @@ function driversWithRevenueOver(drivers, revenue){
   })
 }
 
-function driversWithRevenueOver(drivers, revenue){
-  return drivers.filter(function (driver){
+function driverNamesWithRevenueOver(drivers, revenue){
+  const driversOver drivers.filter(function (driver){
     return driver.revenue > revenue
+  })
+  
+  return driversOver.map(function (driver){
+    return driver.name
   })
 }
